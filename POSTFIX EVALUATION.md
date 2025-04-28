@@ -31,13 +31,36 @@ To write a Python program to evaluate a user-given Postfix expression that conta
 
 ### PROGRAM
 
-```
+```python
+OPERATORS=set(['*','+']) 
+
+
+def evaluate_postfix(expression):
+    stack=[]
+    for i in expression:
+        if i not in OPERATORS:
+            stack.append(i)
+        else :
+            a=stack.pop()
+            b=stack.pop()
+            if i=='+':
+                res=int(a)+int(b)
+            elif i=='*':
+                res=int(b)*int(a)
+            stack.append(res)
+    return stack[0]   
+
+expression = input()
+print("postfix expression: ",expression)
+print("Evaluation result: ",evaluate_postfix(expression))
 
 
 ```
 
 ### OUTPUT
 
+![image](https://github.com/user-attachments/assets/a41e0b78-0c86-4a76-b21d-5a8f9dc01c72)
+
 
 ### RESULT
-
+The program evaluates the given postfix expression using stack operations and displays the final result.
