@@ -29,7 +29,7 @@ To write a Python program to convert a given Infix expression to Postfix express
 
 ### PROGRAM
 
-```
+```python
 operators = set(['-', '*'])
 priority = {'-': 1, '*': 2}
 
