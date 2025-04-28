@@ -26,7 +26,7 @@ To write a Python program to implement a stack using a list and its built-in met
 
 ### PROGRAM
 
-```
+```python
 stack = []
 stack.append(input())
 stack.append(input())
